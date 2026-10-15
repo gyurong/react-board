@@ -1,6 +1,10 @@
 import PostItem from './PostItem.jsx'
 
-function PostList({ posts }) {
+function PostList({
+  posts,
+  onDelete
+}) {
+
   return (
     <div>
 
@@ -9,6 +13,7 @@ function PostList({ posts }) {
         <PostItem
           key={post.id}
           post={post}
+          onDelete={onDelete}
         />
 
       ))}
